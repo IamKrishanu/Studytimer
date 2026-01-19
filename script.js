@@ -2,7 +2,7 @@ let time = 25 * 60;
 let interval = null;
 let startedAt = null;
 
-let mode = "study"; // study | shortBreak | longBreak
+let mode = "study";
 let completedSessions = Number(localStorage.getItem("completedSessions") || 0);
 
 const container = document.querySelector(".container");
@@ -35,14 +35,10 @@ studySlider.oninput = () => {
 
 
 function updateTimer() {
-    // Calculate minutes and seconds
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
   
-    // Update the timer display
     timerEl.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
-  
-    // Change color in the last 60 seconds
     if (time <= 60) {
       timerEl.style.color = "#f87171";
     } else {
@@ -70,7 +66,7 @@ startBtn.onclick = () => {
   pauseBtn.onclick = () => {
     clearInterval(interval);
     interval = null;
-    container.classList.remove("studying"); // 🔥 THIS FIXES IT
+    container.classList.remove("studying");
   };
   
 
