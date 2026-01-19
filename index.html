@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Study Mode</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <input id="intention" placeholder="What are you studying right now?" />
+    <input type="range" id="studyTime" min="10" max="60" value="25">
+    <p id="studyLabel">Study Time: 25 min</p>
+
+    <div id="timer">25:00</div>
+
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="reset">Reset</button>
+      <button id="fullscreen">Fullscreen</button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

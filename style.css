@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+#timer {
+    font-size: 110px; /* 🔥 BIG */
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin: 40px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+.studying #timer {
+    animation: breathe 3s ease-in-out infinite;
+  }
+  
+  @keyframes breathe {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
+    
+
+.studying #timer {
+  opacity: 0.9;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  border: none;
+  padding: 12px 22px;
+  margin: 0 6px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+
+.studying .buttons button {
+    opacity: 0.4;
+  }
+  
+  .studying #pause {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #intention {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: #e5e7eb;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    outline: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  #intention::placeholder {
+    color: #94a3b8;
+  }
+  
+  #intention:focus {
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.02);
+  }
+    
